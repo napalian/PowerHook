@@ -5,6 +5,7 @@ try:
     from pystyle import Write, Colors, Colorate
     from aiosocksy.connector import ProxyConnector
     from concurrent.futures import ThreadPoolExecutor
+    
 except ModuleNotFoundError as error:
     import os
 
@@ -12,12 +13,6 @@ except ModuleNotFoundError as error:
     os.system('pip install aiosocksy')
     os.system('pip install pystyle')
 
-    import asyncio
-    import aiohttp
-
-    from pystyle import Write, Colors, Colorate
-    from aiosocksy.connector import ProxyConnector
-    from concurrent.futures import ThreadPoolExecutor
 
 async def Spammer(msg: str):
 
