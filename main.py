@@ -57,7 +57,7 @@ print(
 ╚═╝      ╚═════╝  ╚══╝╚══╝ ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝'''
     )
 )
-web = Write.Input('[PH] Webhook: ',color=Colors.rainbow,interval=0.025)
+web = Write.Input('\n\n[PH] Webhook: ',color=Colors.rainbow,interval=0.025)
 msg = Write.Input('[PH] Message: ',color=Colors.rainbow,interval=0.025)
 
 asyncio.run(Spammer(web,msg))
