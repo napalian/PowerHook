@@ -3,8 +3,7 @@ try:
     import aiohttp
 
     from pystyle import Write, Colors, Colorate
-    from aiosocksy.connector import ProxyConnector
-    from concurrent.futures import ThreadPoolExecutor
+
 except ModuleNotFoundError:
     import os
 
@@ -16,8 +15,6 @@ except ModuleNotFoundError:
     import aiohttp
 
     from pystyle import Write, Colors, Colorate
-    from aiosocksy.connector import ProxyConnector
-    from concurrent.futures import ThreadPoolExecutor
 
 async def ProxyGen(Amount:int):
     async with aiohttp.ClientSession() as session:
