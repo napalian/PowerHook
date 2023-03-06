@@ -23,7 +23,7 @@ async def Spammer(msg: str):
             proxy.replace('\n','')
 
         async with aiohttp.ClientSession(connector=ProxyConnector(proxy)) as session:
-            with ThreadPoolExecutor(max_workers=30) as executor:
+            with ThreadPoolExecutor(max_workers=len(proxies)) as executor:
 
                 tasks = []
 
