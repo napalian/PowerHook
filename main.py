@@ -12,7 +12,7 @@ except ModuleNotFoundError as error:
     os.system('pip install aiosocksy')
     os.system('pip install pystyle')
 
-async def Spammer(webhook:str,msg: str):
+async def Spammer(webhook:str,msg: str,amount:int):
 
     with open('Data/proxies.txt','r') as proxy_put:
         proxies = proxy_put.readlines()
@@ -22,7 +22,7 @@ async def Spammer(webhook:str,msg: str):
             proxy.replace('\n','')
 
         async with aiohttp.ClientSession(connector=ProxyConnector(proxy)) as session:
-            with ThreadPoolExecutor(max_workers=30) as executor:
+            with ThreadPoolExecutor(max_workers=amount) as executor:
 
                 tasks = []
 
@@ -50,7 +50,8 @@ print(
 ╚═╝      ╚═════╝  ╚══╝╚══╝ ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝'''
     )
 )
-web = Write.Input('[PH] Webhook: ',color=Colors.rainbow,interval=0.025)
+web = Write.Input('\n\n[PH] Webhook: ',color=Colors.rainbow,interval=0.025)
 msg = Write.Input('[PH] Message: ',color=Colors.rainbow,interval=0.025)
+amt = Write.Input('[PH] Amount: ',color=Colors.rainbow,interval=0.025)
 
-asyncio.run(Spammer(web,msg))
+asyncio.run(Spammer(web,msg,int(amt)))
