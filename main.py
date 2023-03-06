@@ -5,7 +5,6 @@ try:
     from pystyle import Write, Colors, Colorate
     from aiosocksy.connector import ProxyConnector
     from concurrent.futures import ThreadPoolExecutor
-    
 except ModuleNotFoundError as error:
     import os
 
@@ -13,7 +12,14 @@ except ModuleNotFoundError as error:
     os.system('pip install aiosocksy')
     os.system('pip install pystyle')
 
-async def Spammer(msg: str):
+    import asyncio
+    import aiohttp
+
+    from pystyle import Write, Colors, Colorate
+    from aiosocksy.connector import ProxyConnector
+    from concurrent.futures import ThreadPoolExecutor
+
+async def Spammer(webhook:str,msg: str):
 
     with open('Data/proxies.txt','r') as proxy_put:
         proxies = proxy_put.readlines()
@@ -23,7 +29,7 @@ async def Spammer(msg: str):
             proxy.replace('\n','')
 
         async with aiohttp.ClientSession(connector=ProxyConnector(proxy)) as session:
-            with ThreadPoolExecutor(max_workers=len(proxies)) as executor:
+            with ThreadPoolExecutor(max_workers=30) as executor:
 
                 tasks = []
 
@@ -51,6 +57,7 @@ print(
 ╚═╝      ╚═════╝  ╚══╝╚══╝ ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝'''
     )
 )
-msg = Write.Input('\n\n[PH] Message: ',color=Colors.rainbow,interval=0.025)
+web = Write.Input('[PH] Webhook: ',color=Colors.rainbow,interval=0.025)
+msg = Write.Input('[PH] Message: ',color=Colors.rainbow,interval=0.025)
 
-asyncio.run(Spammer(msg))
+asyncio.run(Spammer(web,msg))
