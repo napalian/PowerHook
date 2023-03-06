@@ -12,13 +12,6 @@ except ModuleNotFoundError as error:
     os.system('pip install aiosocksy')
     os.system('pip install pystyle')
 
-    import asyncio
-    import aiohttp
-
-    from pystyle import Write, Colors, Colorate
-    from aiosocksy.connector import ProxyConnector
-    from concurrent.futures import ThreadPoolExecutor
-
 async def Spammer(webhook:str,msg: str):
 
     with open('Data/proxies.txt','r') as proxy_put:
