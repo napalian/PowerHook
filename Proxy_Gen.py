@@ -11,11 +11,6 @@ except ModuleNotFoundError:
     os.system('pip install aiosocksy')
     os.system('pip install pystyle')
 
-    import asyncio
-    import aiohttp
-
-    from pystyle import Write, Colors, Colorate
-
 async def ProxyGen(Amount:int):
     async with aiohttp.ClientSession() as session:
         async with session.get('https://api.proxyscrape.com/v2/?request=getproxies&protocol=http&timeout={}&country=all'.format(Amount)) as resp:
