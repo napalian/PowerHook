@@ -41,3 +41,16 @@ Using a webhook spammer for malicious purposes, such as harassment or threats, i
 ## Conclusion
 
 Discord Webhook Spammers can be powerful tools for sending large numbers of messages to a server quickly, but they also carry significant risks. If you choose to use a webhook spammer, you should be careful to avoid getting caught, causing harm, or violating Discord's rules. By following the tips outlined in this document, you can minimize these risks and use a webhook spammer safely. However, it is important to note that using a webhook spammer can still be a violation of Discord's terms of service and can result in severe consequences.
+
+## How do i use PowerHook?
+
+
+```cmd
+git clone https://github.com/napalian/PowerHook
+```
+```cmd
+cd PowerHook
+```
+```cmd
+python Proxy_Gen.py OR python main.py
+```
