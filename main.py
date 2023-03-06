@@ -37,7 +37,7 @@ async def Spammer(webhook:str,msg: str):
                     task = await asyncio.get_running_loop().run_in_executor(
                         executor,
                         lambda: session.post(
-                            "https://discord.com/api/webhooks/1082150850853617674/JgD268YEaTPe-VKLfBy5Nzpfyt3e7EcDENQBslEss1X2rpeaV0jhcO2lHlJOKCq3WZtu",
+                            webhook,
                             json={'content': msg}
                             )
                     )
@@ -57,7 +57,7 @@ print(
 ╚═╝      ╚═════╝  ╚══╝╚══╝ ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝'''
     )
 )
-web = Write.Input('\n\n[PH] Webhook: ',color=Colors.rainbow,interval=0.025)
+web = Write.Input('[PH] Webhook: ',color=Colors.rainbow,interval=0.025)
 msg = Write.Input('[PH] Message: ',color=Colors.rainbow,interval=0.025)
 
 asyncio.run(Spammer(web,msg))
