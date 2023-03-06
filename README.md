@@ -53,5 +53,5 @@ cd PowerHook
 python Proxy_Gen.py OR python main.py
 ```
 ## What are the requirements?
-You need git < https://git-scm.com/downloads
+You need git < https://git-scm.com/downloads || 
 You need pyt < https://www.python.org/downloads/
